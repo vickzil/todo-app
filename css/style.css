@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Bitter&display=swap');
+
+
+/*################ GLOBAL SETTINGS ###################*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.6;
+	background: #f9f9f9;
+	color: #222;
+}
+
+
+img {
+	width: 100%;
+}
+
+.hide {
+	display: none!important;
+}
+
+
+/*################ BANNER ###################*/
+.banner {
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/showcase.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	min-height: 270px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+.banner .wrapper{
+	width: 60%;
+	margin: auto;
+}
+
+.banner h3{
+	font-size: 47px;
+	text-transform: uppercase;
+	font-family: 'Bitter', serif;
+	text-shadow:  0 2px 1px #fff;
+}
+
+
+/*############### TODOS ##################*/
+
+.todos{
+	background: #fff;
+	width: 80%;
+	margin: -60px auto 30px;
+	padding-bottom: 20px;
+	border-radius: 20px;
+	box-shadow: rgba(68, 88, 144, 0.1) 0px 10px 29px 0px;
+}
+
+.todos form {
+	width: 100%;
+	padding: 22px 15px 8px;
+	border-bottom: 1px solid #ced4da;
+	display: flex;
+	justify-content: space-between;
+}
+
+.todos input {
+	width: 70%;
+	display: inline;
+    height: calc(1.8em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none;
+    border-radius: .25rem;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+.todos input:focus {
+	border: none;
+	outline: none;
+	outline-color: transparent;
+	padding-left: 25px;
+}
+
+.button {
+	font-size: 14px;
+	text-transform: uppercase;
+	background: #0077F8;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	padding: 8px 15px;
+	margin-left: 10px;
+	font-family: 'Poppins', serif;
+	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.button:focus {
+	border: none;
+	outline: none;
+	outline-color: transparent;
+}
+
+.form-message {
+	color: #fff;
+	padding: 3px;
+	margin-bottom: 15px;
+	text-align: center;
+	transition: all 0.5s ease-in-out;
+}
+
+.form-message.error {
+	background: #e50000;
+}
+
+.form-message.success {
+	background: #26e073;
+}
+
+.form-message.updated {
+	background: #0077F8;
+}
+
+.form-message p {
+	font-weight: bold;
+}
+
+
+ul.todo-list {
+	padding: 0px;
+	margin: 0px 0px 10px;
+	background: #f7f7f7;
+}
+
+ul.todo-list .todo-list-item{
+	list-style: none!important;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fcfcfc;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: move;
+    margin-bottom: 3px;
+    -webkit-box-shadow: 0 0.05rem 0.01rem rgba(75,75,90,.075);
+    box-shadow: 0 0.05rem 0.01rem rgba(75,75,90,.075);
+    border-left: 4px solid #0058B7;
+}
+
+
+ul.todo-list .todo-list-item .title{
+	margin-right: 12px;
+	opacity: .6;
+}
+
+ul.todo-list .todo-list-item .fa-trash{
+    background: #0077F8;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	padding: 8px;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+li.ui-sortable-handle,
+li.ui-sortable-helper,
+li {
+	list-style: none!important;
+}
+
+
+li.ui-sortable-helper {
+	background: #a2cef36e!important;
+}
+
+
+/*############ FOOTER################*/
+footer {
+	background: #111111;
+	color: #fff;
+	padding: 20px 40px 40px;
+	margin-top: 300px;
+}
+
+.footer-copyright {
+	border-top: 1px solid #333030;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 48px;
+}
+
+.footer-copyright p{
+	color: gray;
+	font-size: 15px;
+}
+
+.footer-copyright a{
+	color: #0077F8;
+	text-decoration: none;
+}
+
+
+/*MEDIA QUERY AT SCREEN SIZE 1115px*/
+@media screen and (max-width: 600px) {
+
+/*BANNER*/
+.banner h3{
+	font-size: 37px;
+}
+
+/*TODOS*/
+.todos{
+	width: 90%;
+}
+
+.todos form {
+	width: 100%;
+	padding: 19px 10px 8px;
+}
+
+.todos input {
+	font-size: 1rem;
+}
+
+.todos input:focus {
+	padding-left: 15px;
+}
+
+.button {
+	font-size: 13px;
+	padding: 6px 13px;
+}
+
+.button span {
+	display: none;
+}
+
+.form-message p {
+	font-size: 14px;
+}
+
+ul.todo-list {
+	margin: 30px 0px;
+}
+
+ul.todo-list .todo-list-item .title{
+	font-size: 14px;
+}
+
+ul.todo-list .todo-list-item .fa-trash{
+	font-size: 12px;
+}
+
+
+}
+
